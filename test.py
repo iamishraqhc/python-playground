@@ -1,10 +1,13 @@
-import pyautogui as pg
-import time
+import random
 
-print('Starting in 5 seconds')
-time.sleep(5)
+alpha_small = 'abcdefghijklmnopqrstuvwxyz'
+alpha_cap = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+numbers = '1234567890'
+symbols = '!@#$%^&*_-+='
 
-for i in range(1000):
-    pg.write('I will not copy from the internet')
-    pg.press('Enter')
-    time.sleep(0.5)
+characters = alpha_small + alpha_cap + numbers + symbols
+
+length = 16
+
+password = "".join(random.sample(characters, length))
+print('Generated password: ', password)
