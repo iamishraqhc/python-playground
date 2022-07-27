@@ -1,4 +1,5 @@
-from langdetect import detect
+from textblob import TextBlob
+text = 'Ich bin Juan'
 
-text = input("Enter any text in any language: ")
-print(detect(text))
+b = TextBlob(text)
+b.detect_language()
